@@ -10,9 +10,12 @@ function custom_theme_files(){
 add_action('wp_enqueue_scripts', 'custom_theme_files');
 
 function custom_theme_features(){
+    register_nav_menu('headMenuLoc', 'Header menu');
+    register_nav_menu('footMenuLoc', 'Footer menu');
+    register_nav_menu('quickMenuLoc', 'Quick links');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-    add_theme_support( 'post-formats',  array( 'aside', 'gallery', 'quote', 'image', 'video' ) );
+    add_theme_support('post-formats',  array( 'aside', 'gallery', 'quote', 'image', 'video' ));
 }
 
 add_action('after_setup_theme', 'custom_theme_features');

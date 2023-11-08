@@ -1,9 +1,13 @@
-<?php get_header();                               
+<?php get_header(); ?>
+<div class="page-banner">
+    <div class="page-banner__content container container--narrow">
+        <h1 class="page-banner__title" style="text-align: center;"><?php echo the_title(); ?></h1>
+    </div>
+</div>
+<div class="page-banner__content container container--narrow">
+<?php
 while (have_posts()) {
     the_post(); ?>
-     <h2><?php the_title(); ?></h2>
-     <p><?php the_content(); ?> </p>
-    <?php }
-    get_footer();
-?>
-
+     <p><?php the_content(); }?> </p>
+</div>
+<?php get_footer(); ?>
